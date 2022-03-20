@@ -1,0 +1,57 @@
+.tile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #000;
+    padding: 5px;
+    font-size: 2.5vmin;
+}
+
+.tile:not(.main) {
+    cursor: pointer;
+}
+
+.tile:before, .tile:after {
+    content: '';
+    position: absolute;
+    background: #f34646;
+    top: 5%;
+    width: 2px;
+    height: 0;
+    transform-origin: top;
+    transition: height .2s ease-in-out;
+}
+
+.tile:before {
+    left: 5%;
+    transform: rotate(-45deg);
+}
+
+.tile:after {
+    right: 5%;
+    transform: rotate(45deg);
+    transition-delay: .2s;
+}
+
+.main {
+    background: #1f7af1;
+    color: #fff;
+    text-transform: uppercase;
+    grid-column: 3;
+    grid-row: 3;
+    cursor: not-allowed;
+}
+
+.selected:before, .selected:after {
+    height: 126%;
+}
+
+.position {
+    position: absolute;
+    top: 6%;
+    left: 6%;
+    font-size: .6em;
+    opacity: .8;
+}

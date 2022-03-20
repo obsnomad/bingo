@@ -1,0 +1,11 @@
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at top left, #5f5 0, transparent 50%) top left,
+    radial-gradient(circle at top right, #f55 0, transparent 50%) top right,
+    radial-gradient(circle at bottom right, #ff5 0, transparent 50%) bottom right,
+    radial-gradient(circle at bottom left, #55f 0, transparent 50%) bottom left;
+}
